@@ -1,0 +1,17 @@
+//WCFM Marketplace Code Snippet to Hide the Policies tab
+add_filter( 'wcfmmp_store_tabs', function( $store_tabs, $store_id ) {
+	if( isset( $store_tabs['policies'] ) ) unset( $store_tabs['policies'] );
+	return $store_tabs;
+}, 50, 2 );
+
+//WCFM Marketplace Code Snippet to Hide the About tab   /DEACTIVATED AS IT SHOULD BE VISIBLE NOW
+/*add_filter( 'wcfmmp_store_tabs', function( $store_tabs, $store_id ) {
+	if( isset( $store_tabs['about'] ) ) unset( $store_tabs['about'] );
+	return $store_tabs;
+}, 50, 2 );
+
+//WCFM Marketplace Code Snippet to Hide the Products tab
+add_filter( 'wcfmmp_store_tabs', function( $store_tabs, $store_id ) {
+	if( isset( $store_tabs['products'] ) ) unset( $store_tabs['products'] );
+	return $store_tabs;
+}, 50, 2 );
